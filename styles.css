@@ -1,0 +1,48 @@
+/*Up-left pointing*/
+.triangle-up-left {
+    width: 0;
+    height: 0;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    overflow: hidden;
+    float: left;
+}
+.triangle-up-left:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: -500px;
+    border-bottom: 500px solid transparent;
+    border-left: 500px solid #4679BD;
+}
+
+/*Up-right pointing*/
+.triangle-up-right {
+    width: 0;
+    height: 0;
+    padding-left:10%;
+    padding-top: 10%;
+    overflow: hidden;
+    float: right;
+}
+.triangle-up-right:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left:-500px;
+    margin-top:-500px;
+    border-left: 500px solid transparent;
+    border-top: 500px solid #4679BD;
+}
+
+h1{
+    font-size: 3em;
+}
+
+@media only screen and (min-width: 600px) {
+    .customImage {
+        width: 50%;
+    }
+}
