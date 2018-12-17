@@ -27,7 +27,8 @@ function loadInit() {
     var str=window.location.href;
     if(str.indexOf("comic") > -1) {
         var n = str.substr(str.lastIndexOf("comic")+5);
-        im_act = parseInt(n);
+        n = n.substring(0, n.length - 1);
+        im_act = parseInt(n) || 1;;
 
     }else{
        im_act = total;
