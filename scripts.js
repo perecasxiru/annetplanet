@@ -3,8 +3,8 @@ var total;
 
 function updateImage(){
     var selected = "COMIC"+ im_act.toString()+".jpg";
-    document.getElementById("displayComic").src = 'https://github.com/perecasxiru/annetplanet/blob/master/comics/'+selected;
-    history.pushState(null, '', "/cmc/comic"+ (im_act).toString());
+    document.getElementById("displayComic").src = 'comics/'+selected;
+    history.pushState(null, '', "cmc/comic"+ (im_act).toString());
 }
 
 function loadRandom() {
@@ -23,7 +23,7 @@ function loadLast() {
 }
 
 function loadInit() {
-    readTextFile("https://github.com/perecasxiru/annetplanet/blob/master/num_last.txt");
+    readTextFile("num_last.txt");
     var str=window.location.href;
     if(str.indexOf("comic") > -1) {
         var n = str.substr(str.lastIndexOf("comic")+5);
