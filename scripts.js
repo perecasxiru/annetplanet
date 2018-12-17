@@ -3,8 +3,8 @@ var total;
 
 function updateImage(){
     var selected = "COMIC"+ im_act.toString()+".jpg";
-    document.getElementById("displayComic").src = '/annetplanet/comics/'+selected;
-    history.pushState(null, '', "/annetplanet/cmc/comic"+ (im_act).toString());
+    document.getElementById("displayComic").src = '/comics/'+selected;
+    history.pushState(null, '', "/cmc/comic"+ (im_act).toString());
 }
 
 function loadRandom() {
