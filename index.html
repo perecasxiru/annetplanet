@@ -12,7 +12,7 @@
     <script src="/scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="/styles.css">
 
-    <title>Hi</title>
+    <title>Comics!</title>
 </head>
 
 <body style="text-align: center; overflow-x: hidden;" onload="loadInit()">
@@ -27,11 +27,20 @@
 <br>
 <div class="row justify-content-center">
     <p>
-      <button type="button" class="btn btn-outline-info btn-lg" onclick="loadFirst()">First</button>
-      <button type="button" class="btn btn-outline-info btn-lg" onclick="Previous()">Previous</button>
-      <button type="button" class="btn btn-outline-info btn-lg" onclick="loadRandom()">Random</button>
-      <button type="button" class="btn btn-outline-info btn-lg" onclick="Next()">Next</button>
-      <button type="button" class="btn btn-outline-info btn-lg" onclick="loadLast()">Last</button>
+      <button type="button" class="btn btn-outline-info smallScreen" onclick="loadFirst()">First</button>
+      <button type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadFirst()">First</button>
+
+      <button type="button" class="btn btn-outline-info smallScreen" onclick="Previous()">Previous</button>
+      <button type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Previous()">Previous</button>
+
+      <button type="button" class="btn btn-outline-info smallScreen" onclick="loadRandom()">Random</button>
+      <button type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadRandom()">Random</button>
+
+      <button type="button" class="btn btn-outline-info smallScreen" onclick="Next()">Next</button>
+      <button type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Next()">Next</button>
+
+      <button type="button" class="btn btn-outline-info smallScreen" onclick="loadLast()">Last</button>
+      <button type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadLast()">Last</button>
     </p>
 </div>
     <img src="" id="displayComic" class="img-fluid customImage" onclick="Next()">

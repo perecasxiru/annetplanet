@@ -46,3 +46,21 @@ h1{
         width: 50%;
     }
 }
+
+@media only screen and (max-width: 600px) {
+  .bigScreen {
+    display:none;
+  }
+  .smallScreen {
+    display:inline;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .bigScreen {
+    display:inline;
+  }
+  .smallScreen {
+    display:none;
+  }
+}
