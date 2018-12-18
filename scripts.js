@@ -3,13 +3,13 @@ var total;
 
 function updateImage(){
     activateButtons();
-    if(im_act===total){
+    if(im_act==total){
         document.getElementById("last").disabled = true;
         document.getElementById("next").disabled = true;
         document.getElementById("lastBig").disabled = true;
         document.getElementById("nextBig").disabled = true;
     }
-    if(im_act===1){
+    if(im_act==1){
         document.getElementById("first").disabled = true;
         document.getElementById("prev").disabled = true;
         document.getElementById("firstBig").disabled = true;
