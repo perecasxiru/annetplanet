@@ -24,7 +24,6 @@ function loadLast() {
 
 function loadInit() {
     readTextFile("/num_last.txt");
-    //alert(total);
     var str=window.location.href;
     if(str.indexOf("comic") > -1) {
         var n = str.substr(str.lastIndexOf("comic")+5);
