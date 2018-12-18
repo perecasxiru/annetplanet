@@ -1,28 +1,34 @@
 var im_act = 0;
 var total;
 
-// $( document).ready(function () {
-//     initTriangles();
-// });
-//
-// $( window ).resize(function() {
-//     initTriangles();
-// });
-//
-// function initTriangles() {
-//     if($(window).width() <=600){
-//       $('head').append('<style>.triangle-up-left{padding-bottom: 20% !important;' +
-//           'padding-left: 20% !important;}</style>');
-//   } else{
-//       $('head').append('<style>.triangle-up-left{padding-bottom: 10% !important;' +
-//           'padding-left: 10% !important;}</style>');
-//       }
-// }
-
 function updateImage(){
+    activateButtons();
+    if(im_act===total){
+        document.getElementById("last").disabled = true;
+        document.getElementById("next").disabled = true;
+        document.getElementById("lastBig").disabled = true;
+        document.getElementById("nextBig").disabled = true;
+    }
+    if(im_act===1){
+        document.getElementById("first").disabled = true;
+        document.getElementById("prev").disabled = true;
+        document.getElementById("firstBig").disabled = true;
+        document.getElementById("prevBig").disabled = true;
+    }
     var selected = "COMIC"+ im_act.toString()+".jpg";
     document.getElementById("displayComic").src = '/comics/'+selected;
     history.pushState(null, '', "/cmc/comic"+ (im_act).toString());
+}
+
+function activateButtons() {
+    document.getElementById("last").disabled = false;
+    document.getElementById("next").disabled = false;
+    document.getElementById("lastBig").disabled = false;
+    document.getElementById("nextBig").disabled = false;
+    document.getElementById("first").disabled = false;
+    document.getElementById("prev").disabled = false;
+    document.getElementById("firstBig").disabled = false;
+    document.getElementById("prevBig").disabled = false;
 }
 
 function loadRandom() {

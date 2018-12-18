@@ -22,25 +22,25 @@
 <div class="triangle-text" style="right:0;">&nbspFree<br>Calendar</div>
 <br>
 <div class="row justify-content-center">
-    <img src='/images/logo.png' id="logo" class="float-left"><h1>Annet Planet</h1>
+    <img src='/images/logo.png' id="logo" class="img-fluid float-left"><h1>Annet Planet</h1>
 </div>
 <br>
 <div class="row justify-content-center">
     <p>
-      <button type="button" class="btn btn-outline-info smallScreen" onclick="loadFirst()">First</button>
-      <button type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadFirst()">First</button>
+      <button id="first" type="button" class="btn btn-outline-info smallScreen" onclick="loadFirst()">First</button>
+      <button id="firstBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadFirst()">First</button>
 
-      <button type="button" class="btn btn-outline-info smallScreen" onclick="Previous()">Previous</button>
-      <button type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Previous()">Previous</button>
+      <button id="prev" type="button" class="btn btn-outline-info smallScreen" onclick="Previous()">Previous</button>
+      <button id="prevBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Previous()">Previous</button>
 
-      <button type="button" class="btn btn-outline-info smallScreen" onclick="loadRandom()">Random</button>
-      <button type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadRandom()">Random</button>
+      <button id="rand" type="button" class="btn btn-outline-info smallScreen" onclick="loadRandom()">Random</button>
+      <button id="randBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadRandom()">Random</button>
 
-      <button type="button" class="btn btn-outline-info smallScreen" onclick="Next()">Next</button>
-      <button type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Next()">Next</button>
+      <button id="next" type="button" class="btn btn-outline-info smallScreen" onclick="Next()">Next</button>
+      <button id="nextBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Next()">Next</button>
 
-      <button type="button" class="btn btn-outline-info smallScreen" onclick="loadLast()">Last</button>
-      <button type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadLast()">Last</button>
+      <button id="last" type="button" class="btn btn-outline-info smallScreen" onclick="loadLast()">Last</button>
+      <button id="lastBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadLast()">Last</button>
     </p>
 </div>
     <img src="" id="displayComic" class="img-fluid customImage" onclick="Next()">
