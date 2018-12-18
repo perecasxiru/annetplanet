@@ -1,6 +1,24 @@
 var im_act = 0;
 var total;
 
+// $( document).ready(function () {
+//     initTriangles();
+// });
+//
+// $( window ).resize(function() {
+//     initTriangles();
+// });
+//
+// function initTriangles() {
+//     if($(window).width() <=600){
+//       $('head').append('<style>.triangle-up-left{padding-bottom: 20% !important;' +
+//           'padding-left: 20% !important;}</style>');
+//   } else{
+//       $('head').append('<style>.triangle-up-left{padding-bottom: 10% !important;' +
+//           'padding-left: 10% !important;}</style>');
+//       }
+// }
+
 function updateImage(){
     var selected = "COMIC"+ im_act.toString()+".jpg";
     document.getElementById("displayComic").src = '/comics/'+selected;
