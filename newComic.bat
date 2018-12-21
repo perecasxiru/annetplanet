@@ -1,5 +1,5 @@
 @ECHO OFF
 python newcomic.py
 git add .
-git commit -m "necomic"
+git commit -m "new comic"
 git push
