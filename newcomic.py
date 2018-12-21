@@ -1,6 +1,7 @@
 import os
 import shutil
 
+shutil.rmtree("cmc")
 src_files = os.listdir("comics")
 try:
     for file_name in src_files:
