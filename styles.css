@@ -37,6 +37,10 @@
     border-top: 1000px solid #4679BD;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 h1{
     font-size: 3em;
 }
