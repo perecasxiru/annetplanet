@@ -1,6 +1,11 @@
 var im_act = 0;
 var total;
 
+var host = "annetplanet.com"
+if (window.location.host == host && window.location.protocol != "https:") {
+  window.location.protocol = "https:"
+}
+
 function updateImage(){
     activateButtons();
     if(im_act==total){
