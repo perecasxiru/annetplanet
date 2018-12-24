@@ -15,47 +15,52 @@
 </head>
 
 <body style="text-align: center; " onload="loadInit()">
-<div class="triangle-up-left triangle1" style="cursor: pointer" onclick="location.href='/about'"></div>
-<div class="triangle-text" >&nbspAbout<br>Me</div>
-<div class="triangle-up-right triangle2" style="cursor: pointer" onclick="location.href='/calendar'"></div>
-<div class="triangle-text" style="right:0;">&nbspFree<br>Calendar</div>
-<br>
-<div class="row justify-content-center">
-    <img src='/images/logo.png' id="logo" class="img-fluid float-left"><h1>Annet Planet</h1>
+
+<div>
+    <div class="triangle-up-left triangle1" style="cursor: pointer" onclick="location.href='/about'"></div>
+    <div class="triangle-text" >&nbspAbout<br>Me</div>
+    <div class="triangle-up-right triangle2" style="cursor: pointer" onclick="location.href='/calendar'"></div>
+    <div class="triangle-text" style="right:0;">&nbspFree<br>Calendar</div>
 </div>
 <br>
-<div class="row justify-content-center">
-    <p>
-      <button id="first" type="button" class="btn btn-outline-info smallScreen" onclick="loadFirst()">First</button>
-      <button id="firstBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadFirst()">First</button>
-
-      <button id="prev" type="button" class="btn btn-outline-info smallScreen" onclick="Previous()">Previous</button>
-      <button id="prevBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Previous()">Previous</button>
-
-      <button id="rand" type="button" class="btn btn-outline-info smallScreen" onclick="loadRandom()">Random</button>
-      <button id="randBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadRandom()">Random</button>
-
-      <button id="next" type="button" class="btn btn-outline-info smallScreen" onclick="Next()">Next</button>
-      <button id="nextBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Next()">Next</button>
-
-      <button id="last" type="button" class="btn btn-outline-info smallScreen" onclick="loadLast()">Last</button>
-      <button id="lastBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadLast()">Last</button>
-    </p>
-</div>
-
-<img src="" id="displayComic" class="img-fluid customImage" onclick="Next()">
-
-<footer>
-    <br><br>
-    <div class="justify-content-center">annetplanetcomics@gmail.com</div>
-    <div style="line-height:50%;"><br></div>
-    <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_follow row justify-content-center">
-        <script async src="https://static.addtoany.com/menu/page.js"></script>
-        <a class="a2a_button_facebook" data-a2a-follow="annetplanetcomics"></a>
-        <a class="a2a_button_instagram" data-a2a-follow="annetplanetcomics"></a>
+<div class="justify-content-center globalContent">
+    <div class="row">
+        <img src='/images/logo.png' id="logo" class="img-fluid float-left"><h1>Annet Planet</h1>
     </div>
     <br>
-</footer>
+    <div class="row justify-content-center">
+        <p>
+          <button id="first" type="button" class="btn btn-outline-info smallScreen" onclick="loadFirst()">First</button>
+          <button id="firstBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadFirst()">First</button>
+
+          <button id="prev" type="button" class="btn btn-outline-info smallScreen" onclick="Previous()">Previous</button>
+          <button id="prevBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Previous()">Previous</button>
+
+          <button id="rand" type="button" class="btn btn-outline-info smallScreen" onclick="loadRandom()">Random</button>
+          <button id="randBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadRandom()">Random</button>
+
+          <button id="next" type="button" class="btn btn-outline-info smallScreen" onclick="Next()">Next</button>
+          <button id="nextBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Next()">Next</button>
+
+          <button id="last" type="button" class="btn btn-outline-info smallScreen" onclick="loadLast()">Last</button>
+          <button id="lastBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadLast()">Last</button>
+        </p>
+    </div>
+
+    <img src="" id="displayComic" class="img-fluid customImage" onclick="Next()">
+
+    <footer>
+        <br><br>
+        <div class="justify-content-center">annetplanetcomics@gmail.com</div>
+        <div style="line-height:50%;"><br></div>
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_follow row justify-content-center">
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
+            <a class="a2a_button_facebook" data-a2a-follow="annetplanetcomics"></a>
+            <a class="a2a_button_instagram" data-a2a-follow="annetplanetcomics"></a>
+        </div>
+        <br>
+    </footer>
+</div>
 
 </body>
 </html>
