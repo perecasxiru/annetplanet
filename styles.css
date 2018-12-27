@@ -175,3 +175,7 @@ body {
   }
 }
 
+.loading {
+  background: transparent url('/images/loading.gif') center no-repeat;
+}
+
