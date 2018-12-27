@@ -7,13 +7,6 @@ if (window.location.host == host && window.location.protocol != "https:") {
 }
 
 function updateImage(){
-
-    deactivateButtons();
-
-    var selected = "COMIC"+ im_act.toString()+".jpg";
-    document.getElementById("displayComic").src = '/comics/'+selected;
-    history.pushState(null, '', "/cmc/comic"+ (im_act).toString());
-
     activateButtons();
     if(im_act==total){
         document.getElementById("last").disabled = true;
@@ -27,6 +20,9 @@ function updateImage(){
         document.getElementById("firstBig").disabled = true;
         document.getElementById("prevBig").disabled = true;
     }
+    var selected = "COMIC"+ im_act.toString()+".jpg";
+    document.getElementById("displayComic").src = '/comics/'+selected;
+    history.pushState(null, '', "/cmc/comic"+ (im_act).toString());
 }
 
 function activateButtons() {
@@ -38,21 +34,6 @@ function activateButtons() {
     document.getElementById("prev").disabled = false;
     document.getElementById("firstBig").disabled = false;
     document.getElementById("prevBig").disabled = false;
-    document.getElementById("rand").disabled = false;
-    document.getElementById("randBig").disabled = false;
-}
-
-function deactivateButtons() {
-    document.getElementById("last").disabled = true;
-    document.getElementById("next").disabled = true;
-    document.getElementById("lastBig").disabled = true;
-    document.getElementById("nextBig").disabled = true;
-    document.getElementById("first").disabled = true;
-    document.getElementById("prev").disabled = true;
-    document.getElementById("firstBig").disabled = true;
-    document.getElementById("prevBig").disabled = true;
-    document.getElementById("rand").disabled = true;
-    document.getElementById("randBig").disabled = true;
 }
 
 function loadRandom() {
