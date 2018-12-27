@@ -7,8 +7,6 @@ if (window.location.host == host && window.location.protocol != "https:") {
 }
 
 function updateImage(){
-    document.getElementById("displayComic").src = "/images/loading.gif";
-    document.getElementById("displayComic").classList.toggle("img-fluid");
     activateButtons();
     if(im_act==total){
         document.getElementById("last").disabled = true;
@@ -24,7 +22,6 @@ function updateImage(){
     }
     var selected = "COMIC"+ im_act.toString()+".jpg";
     document.getElementById("displayComic").src = '/comics/'+selected;
-    document.getElementById("displayComic").classList.toggle("img-fluid");
     history.pushState(null, '', "/cmc/comic"+ (im_act).toString());
 }
 
