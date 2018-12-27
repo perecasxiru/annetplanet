@@ -7,7 +7,7 @@ if (window.location.host == host && window.location.protocol != "https:") {
 }
 
 function updateImage(){
-    document.getElementById("displayComic").src = "";
+    document.getElementById("displayComic").src = "/images/loading.gif";
     activateButtons();
     if(im_act==total){
         document.getElementById("last").disabled = true;
