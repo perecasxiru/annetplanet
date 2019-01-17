@@ -20,7 +20,7 @@ function updateImage(){
         document.getElementById("firstBig").disabled = true;
         document.getElementById("prevBig").disabled = true;
     }
-    var selected = "COMIC"+ im_act.toString()+".jpg?ver="+str(total);
+    var selected = "COMIC"+ im_act.toString()+".jpg";
     document.getElementById("displayComic").src = '/comics/'+selected;
     history.pushState(null, '', "/cmc/comic"+ (im_act).toString());
 }
