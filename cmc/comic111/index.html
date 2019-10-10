@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132362996-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-132362996-1');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+    <title>Comics!</title>
+</head>
+
+<body style="text-align: center; " onload="loadInit()">
+<div class="triangle-empty-left"></div>
+<div class="triangle-up-right triangle2" style="cursor: pointer" onclick="location.href='/calendar'"></div>
+<div class="triangle-text" style="right:0;">&nbspFree<br>Calendar</div>
+<br>
+<div class="row justify-content-center">
+    <img src='/images/logo.png' id="logo" class="img-fluid float-left" style="max-height: 3.2em"><h1>Annet Planet</h1>
+</div>
+<br>
+<div class="row justify-content-center">
+    <p>
+      <button id="first" type="button" class="btn btn-outline-info smallScreen" onclick="loadFirst()">First</button>
+      <button id="firstBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadFirst()">First</button>
+
+      <button id="prev" type="button" class="btn btn-outline-info smallScreen" onclick="Previous()">Previous</button>
+      <button id="prevBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Previous()">Previous</button>
+
+      <button id="rand" type="button" class="btn btn-outline-info smallScreen" onclick="loadRandom()">Random</button>
+      <button id="randBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadRandom()">Random</button>
+
+      <button id="next" type="button" class="btn btn-outline-info smallScreen" onclick="Next()">Next</button>
+      <button id="nextBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="Next()">Next</button>
+
+      <button id="last" type="button" class="btn btn-outline-info smallScreen" onclick="loadLast()">Last</button>
+      <button id="lastBig" type="button" class="btn btn-outline-info btn-lg bigScreen" onclick="loadLast()">Last</button>
+    </p>
+</div>
+
+<img src="" id="displayComic" class="img-fluid customImage" onclick="Next()">
+
+<footer>
+    <br><br>
+    <div class="justify-content-center normalText">annetplanetcomics@gmail.com</div>
+    <div style="line-height:50%;"><br></div>
+    <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_follow row justify-content-center">
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <a class="a2a_button_facebook" data-a2a-follow="annetplanetcomics"></a>
+        <a class="a2a_button_instagram" data-a2a-follow="annetplanetcomics"></a>
+
+    </div>
+    <br>
+</footer>
+
+</body>
+</html>
