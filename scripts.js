@@ -2,50 +2,34 @@ var im_act = 0;
 var total;
 
 var host = "annetplanet.com"
-if (window.location.host == host && window.location.protocol != "https:") {
-  window.location.protocol = "https:"
+if (window.location.host === host && window.location.protocol !== "https:") {
+    window.location.protocol = "https:"
 }
 
-function updateImage(){
-    activateButtons();
-    if(im_act==total){
+function updateImage() {
+    if (im_act === total) {
         document.getElementById("last").disabled = true;
         document.getElementById("next").disabled = true;
-        document.getElementById("lastBig").disabled = true;
-        document.getElementById("nextBig").disabled = true;
     }
-    if(im_act==1){
+    if (im_act === 1) {
         document.getElementById("first").disabled = true;
         document.getElementById("prev").disabled = true;
-        document.getElementById("firstBig").disabled = true;
-        document.getElementById("prevBig").disabled = true;
     }
-    var ext="jpg";
-    if(im_act>185){
-    	ext="png";
+    var ext = "jpg";
+    if (im_act > 185) {
+        ext = "png";
     }
-    var selected = "COMIC"+ im_act.toString()+"."+ext+"?ver="+total.toString();
-    document.getElementById("displayComic").src = '/comics/'+selected;
-    history.pushState(null, '', "/cmc/comic"+ (im_act).toString());
-}
-
-function activateButtons() {
-    document.getElementById("last").disabled = false;
-    document.getElementById("next").disabled = false;
-    document.getElementById("lastBig").disabled = false;
-    document.getElementById("nextBig").disabled = false;
-    document.getElementById("first").disabled = false;
-    document.getElementById("prev").disabled = false;
-    document.getElementById("firstBig").disabled = false;
-    document.getElementById("prevBig").disabled = false;
+    var selected = "COMIC" + im_act.toString() + "." + ext + "?ver=" + total.toString();
+    document.getElementById("displayComic").src = '/comics/' + selected;
+    history.pushState(null, '', "/cmc/comic" + (im_act).toString());
 }
 
 function loadRandom() {
     var rand;
-    do{
-        rand = Math.floor(Math.random() * parseInt(total))+1;
+    do {
+        rand = Math.floor(Math.random() * parseInt(total)) + 1;
     }
-    while (rand===im_act);
+    while (rand === im_act);
     im_act = rand;
     updateImage();
 }
@@ -55,19 +39,23 @@ function loadLast() {
     updateImage();
 }
 
-function loadInit() {
-    readTextFile("/num_last.txt");
-    var str=window.location.href;
-    if(str.indexOf("comic") > -1) {
-        var n = str.substr(str.lastIndexOf("comic")+5);
-        n = n.substring(0, n.length - 1);
-        im_act = parseInt(n) || 1;;
 
-    }else{
-       im_act = total;
+function loadInit(update_image=true) {
+    readTextFile("/num_last.txt");
+    var str = window.location.href;
+    if (str.indexOf("comic") > -1) {
+        var n = str.substr(str.lastIndexOf("comic") + 5);
+        n = n.substring(0, n.length - 1);
+        im_act = parseInt(n) || 1;
+
+
+    } else {
+        im_act = total;
     }
 
-    updateImage();
+    if(update_image) {
+        updateImage();
+    }
 }
 
 function loadFirst() {
@@ -77,33 +65,67 @@ function loadFirst() {
 
 function Next() {
     im_act++;
-    if(im_act>total){
-        im_act=total;
+    if (im_act > total) {
+        im_act = total;
     }
     updateImage();
 }
 
 function Previous() {
     im_act--;
-    if(im_act<1){
-        im_act=1;
+    if (im_act < 1) {
+        im_act = 1;
     }
     updateImage();
 }
 
-function readTextFile(file)
-{
+function readTextFile(file) {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status === 0) {
                 total = rawFile.responseText;
             }
         }
     }
     rawFile.send(null);
+}
+
+function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+            /* Make an HTTP request using the attribute value as the file name: */
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState === 4) {
+                    if (this.status === 200) {
+                        elmnt.innerHTML = this.responseText;
+                    }
+                    if (this.status === 404) {
+                        elmnt.innerHTML = "Page not found.";
+                    }
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /* Exit the function: */
+            return;
+        }
+    }
+}
+
+// Create archive images
+function createArchive(){
+    console.log(document.getElementById('row-archive'));
+    console.log(total);
 }
