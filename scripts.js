@@ -7,6 +7,11 @@ if (window.location.host === host && window.location.protocol !== "https:") {
 }
 
 function updateImage() {
+    document.getElementById("last").disabled = false;
+    document.getElementById("next").disabled = false;
+    document.getElementById("first").disabled = false;
+    document.getElementById("prev").disabled = false;
+
     if (im_act === total) {
         document.getElementById("last").disabled = true;
         document.getElementById("next").disabled = true;
@@ -40,20 +45,23 @@ function loadLast() {
 }
 
 
-function loadInit(update_image=true) {
+function loadInit(update_image = true) {
+
+    // Set total
     readTextFile("/num_last.txt");
+
     var str = window.location.href;
+
     if (str.indexOf("comic") > -1) {
         var n = str.substr(str.lastIndexOf("comic") + 5);
         n = n.substring(0, n.length - 1);
         im_act = parseInt(n) || 1;
 
-
     } else {
         im_act = total;
     }
 
-    if(update_image) {
+    if (update_image) {
         updateImage();
     }
 }
@@ -86,6 +94,7 @@ function readTextFile(file) {
         if (rawFile.readyState === 4) {
             if (rawFile.status === 200 || rawFile.status === 0) {
                 total = rawFile.responseText;
+                console.log(total);
             }
         }
     }
@@ -125,7 +134,34 @@ function includeHTML() {
 }
 
 // Create archive images
-function createArchive(){
-    console.log(document.getElementById('row-archive'));
+function createArchive() {
+    var ra = document.getElementById('row-archive');
+
+    var cid, comictext, comictextext;
+    for (cid = total; cid > 0; cid--) {
+        comictext = 'COMIC' + cid.toString();
+        if (cid > 185) {
+            comictextext = comictext + '.png'
+        } else {
+            comictextext = comictext + '.jpg'
+        }
+
+        var div = document.createElement("div");
+        div.setAttribute("class", "col-lg-3 col-md-12")
+
+        var a = document.createElement("a");
+        a.setAttribute("href", "/cmc/comic" + cid.toString())
+
+        var img = document.createElement("img");
+        img.setAttribute("src", "/comics/" + comictextext);
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("class", "w-100 mb-2 archive-img")
+        img.setAttribute("alt", comictext);
+
+        a.appendChild(img);
+        div.appendChild(a);
+        ra.appendChild(div);
+    }
+
     console.log(total);
 }

@@ -11,3 +11,16 @@
     font-family: 'Annet Planet', Calibri, serif
 }
 
+.archive-img{
+    /*padding:10px;*/
+    /*margin:0;*/
+    transition: all 0.3s ease;
+    opacity:1;
+}
+
+.archive-img:hover{
+    /*padding: 0;*/
+    /*margin: 10px;*/
+    opacity: 0.5;
+
+}
