@@ -151,6 +151,7 @@ function createArchive() {
 
         var a = document.createElement("a");
         a.setAttribute("href", "/cmc/comic" + cid.toString())
+        a.setAttribute("target", "_blank")
 
         var img = document.createElement("img");
         img.setAttribute("src", "/comics/" + comictextext);
