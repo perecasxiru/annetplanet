@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,30 +19,77 @@
     <title>Annet Planet</title>
 </head>
 
-<body style="text-align: center; ">
-<br>
-<div class="container" id="main-container">
-    <div class="row">
-        <div class="col-lg-2 col-12" w3-include-html="/navbar.html"></div>
+<body style="text-align: center; height:100%">
+<div class="container-fluid h-100" id="main-container">
+    <div class="row justify-content-center h-100">
+        <div class="col-lg-2 col-12" w3-include-html="/navbar.html" style="background: papayawhip"></div>
         <div class="col-lg-10 col-12">
-
-            <div class="justify-content-center">
-                <h1 class="annetfont">ABOUT ME</h1>
-            </div>
-            <br><br>
             <div class="container">
+                <br>
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <p align="justify">
-                            Amateur artist, data scientist, essentialist and amateur living creature in general.
-                        </p>
-                        <p align="justify">
-                            Short silly and occasionally funny comics
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-6"><img class="img-fluid" src='/images/about.jpg'></div>
-                </div>
+                    <div class="col-12 col-md-7 order-1 order-md-0">
 
+                        <h1 class="annetfont">ABOUT ME</h1>
+                        <br>
+                        <p align="justify">
+                            My name is Anna Bach Valls, I live in Barcelona and I spend most of my time working, drawing
+                            and hiking. I studied Mathematics and Computer Science at university. By day, I work as a
+                            product analyst in the tech industry. This allows me to see the excitement, but also the
+                            everyday monotony, of working in an office in such a fast paced and creative industry. By
+                            night, I draw inspiration from my daily life and bring together my two greatest pleasures,
+                            art and humor, to give life to my alter ego of Annet Planet.
+                        </p>
+                        <br><br>
+                        <h5 class="annetfont">NEWSFEED</h5>
+
+                        <!-- NEW 1 -->
+                        <br>
+                        <a href="https://www.lavanguardia.com/vida/20210303/6262637/anna-bach-dibujo-mujer-trabajadora-tono-positivo-anna-bach.html"
+                           target="_blank" style="text-decoration:none; color:black">
+                            <div class="row archive-img" style="background: whitesmoke; padding: 5px">
+                                <div class="col-lg-3 col-12" style="padding-left:0">
+                                    <img src="/images/news1.png" class="img-fluid" alt="new1">
+                                </div>
+                                <div class="col-lg-9 col-12 text-left">
+                                    <span style="font-weight:bold">Anna Bach: “Dibujo la mujer trabajadora en tono positivo”</span>
+                                    <div style="line-height:50%;"><br></div>
+                                    I recently got featured in <span style="font-style:italic">La Vanguardia</span> in an
+                                    article that pretty much sums my life
+                                    up.
+                                    <div style="line-height:50%;"><br></div>
+                                    <p style="text-align:right; color: grey; margin:0; padding: 0; font-size: 70%">March
+                                        2021</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- NEW 2 -->
+                        <br>
+                        <a href="https://soundcloud.com/pcwc/pcwc-annet-planet" target="_blank" style="text-decoration:none; color:black">
+                            <div class="row archive-img" style="background: whitesmoke; padding: 5px">
+                                <div class="col-lg-3 col-12" style="padding-left:0">
+                                    <img src="/images/news2.png" class="img-fluid" alt="new2">
+                                </div>
+                                <div class="col-lg-9 col-12 text-left">
+                                    <span style="font-weight:bold"> PCWC - Annet Planet </span>
+                                    <div style="line-height:50%;"><br></div>
+                                    The great David Daneman interviewed me in his famous
+                                    <span style="font-style:italic">The PodComics WebCast</span>.
+                                    <div style="line-height:50%;"><br></div>
+                                    <p style="text-align:right; color: grey; margin:0; padding: 0; font-size: 70%">April
+                                        2020</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- END NEWS -->
+
+                        <br>
+                    </div>
+                    <div class="col-12 col-md-5 order-0 order-md-1">
+                        <img class="img-fluid" src='/images/toonme.jpg' alt="me">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
