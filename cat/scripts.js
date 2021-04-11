@@ -163,5 +163,7 @@ function createArchive() {
 function changeURL(){
     var str = window.location.href;
     str = str.replace("cat", "eng");
+    str = str.replace("artista", "artist");
+    str = str.replace("arxiu", "archive");
     window.location = str;
 }
