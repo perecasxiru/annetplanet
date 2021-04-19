@@ -160,10 +160,17 @@ function createArchive() {
     console.log(total);
 }
 
-function changeURL(){
+function changeURL() {
     var str = window.location.href;
     str = str.replace("cat", "eng");
     str = str.replace("artista", "artist");
     str = str.replace("arxiu", "archive");
     window.location = str;
+}
+
+function navbarImage() {
+    var im = document.getElementById('coffee_cat');
+    var ts = new Date();
+    im.src = 'https://img.buymeacoffee.com/button-api/?text=Compra\'m un cafè&emoji=&slug=annetplanet&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00&ver=' + ts.getTime();
+
 }

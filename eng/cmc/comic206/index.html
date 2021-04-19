@@ -36,7 +36,7 @@
 
     <title>Annet Planet</title>
 </head>
-<body onload="loadInit()" style="height: 100%">
+<body onload="loadInit();" style="height: 100%">
 
 <div class="container-fluid h-100 ">
     <div class="row justify-content-center h-100">
@@ -141,6 +141,7 @@
     jQuery(document).ready(function (e) {
         setTimeout(function () {
             jQuery('img[usemap]').rwdImageMaps();
+            navbarImage();
         }, 2000);
         console.log('AAA');
     });
