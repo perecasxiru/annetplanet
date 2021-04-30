@@ -18,9 +18,9 @@ try:
             shutil.copy("eng\\index.html", "eng\\cmc\\"+file_name.split(".")[0].lower() + "\\" + "index.html")
 
     for file_name in src_files_cat:
-        if not os.path.exists("cat\\cmc\\"+file_name.split(".")[0].lower()):
-            os.makedirs("cat\\cmc\\"+file_name.split(".")[0].lower())
-            shutil.copy("cat\\index.html", "cat\\cmc\\"+file_name.split(".")[0].lower() + "\\" + "index.html")
+        if not os.path.exists("cat\\cmc\\"+file_name.split(".")[0].split("_")[0].lower()):
+            os.makedirs("cat\\cmc\\"+file_name.split(".")[0].split("_")[0].lower())
+            shutil.copy("cat\\index.html", "cat\\cmc\\"+file_name.split(".")[0].split("_")[0].lower() + "\\" + "index.html")
 
     f = open("num_last_eng.txt", "w")
     f.write(str(len(src_files_eng)))
