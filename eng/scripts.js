@@ -164,7 +164,7 @@ function changeURL(){
     str = str.replace("eng", "cat");
     str = str.replace("artist", "artista");
     str = str.replace("archive", "arxiu");
-    window.location = str;
+    window.location = str+"/";
 }
 
 function navbarImage() {
