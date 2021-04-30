@@ -21,7 +21,7 @@ function updateImage() {
         document.getElementById("prev").disabled = true;
     }
     var ext = "png";
-    var selected = "COMIC" + im_act.toString() + "." + ext + "?ver=" + total.toString();
+    var selected = "COMIC" + im_act.toString() + "_CAT." + ext + "?ver=" + total.toString();
     document.getElementById("displayComic").src = '/comics_cat/' + selected;
     history.pushState(null, '', "/cat/cmc/comic" + (im_act).toString());
 }
@@ -137,7 +137,7 @@ function createArchive() {
     var cid, comictext, comictextext;
     for (cid = total; cid > 0; cid--) {
         comictext = 'COMIC' + cid.toString();
-        comictextext = comictext + '.png'
+        comictextext = comictext + '_CAT.png'
 
         var div = document.createElement("div");
         div.setAttribute("class", "col-lg-3 col-md-12")
