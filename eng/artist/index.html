@@ -1,159 +1,112 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/styles.css">
-    <script src="/eng/scripts.js"></script>
-    <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
-    <!--            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
-    <!--            crossorigin="anonymous"></script>-->
-    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"-->
-    <!--            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"-->
-    <!--            crossorigin="anonymous"></script>-->
-    <!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"-->
-    <!--            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"-->
-    <!--            crossorigin="anonymous"></script>-->
-    <title>Annet Planet</title>
+    <title>Annet Planet - Artist</title>
+    <meta name="description" content="Annet Planet - comics about office life, humor and a bit of science by Anna Bach.">
+    <meta property="og:title" content="Annet Planet - Artist">
+    <meta property="og:description" content="Annet Planet - comics about office life, humor and a bit of science by Anna Bach.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://annetplanet.com/images/logo.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="preload" href="/AnnetPlanet.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/site.js" defer></script>
 </head>
-
-<body style="text-align: center; height:100%">
-<div class="container-fluid h-100" id="main-container">
-    <div class="row justify-content-center h-100">
-        <div class="col-lg-2 col-12" w3-include-html="/eng/navbar.html" style="background: papayawhip"></div>
-        <div class="col-lg-10 col-12">
-            <div class="container">
-                <br>
-                <div class="row">
-                    <div class="col-12 col-md-7 order-1 order-md-0">
-
-                        <h1 class="annetfont">ABOUT ME</h1>
-                        <br>
-                        <p align="justify">
-                            My name is Anna Bach Valls, I live in Barcelona and I spend most of my time working, drawing
-                            and hiking. I studied Mathematics and Computer Science at university. By day, I work as a
-                            product analyst in the tech industry. This allows me to see the excitement, but also the
-                            everyday monotony, of working in an office in such a fast paced and creative industry. By
-                            night, I draw inspiration from my daily life and bring together my two greatest pleasures,
-                            art and humor, to give life to my alter ego of Annet Planet.
-                        </p>
-                        <br><br>
-                        <h5 class="annetfont">NEWSFEED</h5>
-
-                        <!-- NEW 1 -->
-                        <br>
-                        <a href="https://www.lavanguardia.com/vida/20210303/6262637/anna-bach-dibujo-mujer-trabajadora-tono-positivo-anna-bach.html"
-                           target="_blank" style="text-decoration:none; color:black">
-                            <div class="row archive-img" style="background: whitesmoke; padding: 5px">
-                                <div class="col-lg-3 col-12" style="padding-left:0">
-                                    <img src="/images/news1.png" class="img-fluid" alt="new1">
-                                </div>
-                                <div class="col-lg-9 col-12 text-left">
-                                    <span style="font-weight:bold">Anna Bach: “Dibujo la mujer trabajadora en tono positivo”</span>
-                                    <div style="line-height:50%;"><br></div>
-                                    I recently got featured in <span style="font-style:italic">La Vanguardia</span> in an
-                                    article that pretty much sums my life
-                                    up.
-                                    <div style="line-height:50%;"><br></div>
-                                    <p style="text-align:right; color: grey; margin:0; padding: 0; font-size: 70%">March
-                                        2021</p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <!-- NEW 2 -->
-                        <br>
-                        <a href="https://soundcloud.com/pcwc/pcwc-annet-planet" target="_blank" style="text-decoration:none; color:black">
-                            <div class="row archive-img" style="background: whitesmoke; padding: 5px">
-                                <div class="col-lg-3 col-12" style="padding-left:0">
-                                    <img src="/images/news2.png" class="img-fluid" alt="new2">
-                                </div>
-                                <div class="col-lg-9 col-12 text-left">
-                                    <span style="font-weight:bold"> PCWC - Annet Planet </span>
-                                    <div style="line-height:50%;"><br></div>
-                                    The great David Daneman interviewed me in his famous podcast
-                                    <span style="font-style:italic">The PodComics WebCast</span>.
-                                    <div style="line-height:50%;"><br></div>
-                                    <p style="text-align:right; color: grey; margin:0; padding: 0; font-size: 70%">April
-                                        2020</p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <!-- END NEWS -->
-
-                        <br>
-                    </div>
-                    <div class="col-12 col-md-5 order-0 order-md-1">
-                        <img class="img-fluid" src='/images/toonme.jpg' alt="me">
-                    </div>
+<body data-lang="eng" data-page="other">
+<div class="layout">
+    <aside class="sidebar">
+        <nav class="menu" aria-label="Menu">
+            <img src="/images/annet_web_menu.webp" width="244" height="500" alt="">
+            <img class="hl h1" src="/images/annet_web_menu_c1.webp" width="244" height="500" alt="" loading="lazy">
+            <img class="hl h2" src="/images/annet_web_menu_c2.webp" width="244" height="500" alt="" loading="lazy">
+            <img class="hl h3" src="/images/annet_web_menu_c3.webp" width="244" height="500" alt="" loading="lazy">
+            <a class="m1" href="/eng/" aria-label="Comics"></a>
+            <a class="m2" href="/eng/archive/" aria-label="Archive"></a>
+            <a class="m3" href="/eng/artist/" aria-label="Artist"></a>
+        </nav>
+        <a class="coffee" href="https://www.buymeacoffee.com/annetplanet" target="_blank" rel="noopener">&#9749; Buy me a coffee</a>
+        <div class="social">
+            <a href="https://www.instagram.com/annetplanetcomics/" target="_blank" rel="noopener" class="archive-img" aria-label="Instagram"><img src="/images/instagram.png" width="30" height="30" alt="Instagram"></a>
+            <a href="https://www.facebook.com/annetplanetcomics/" target="_blank" rel="noopener" class="archive-img" aria-label="Facebook"><img src="/images/facebook.png" width="30" height="30" alt="Facebook"></a>
+            <a href="mailto:annetplanetcomics@gmail.com" class="archive-img" aria-label="Email"><img src="/images/gmail.png" width="30" height="30" alt="Email"></a>
+        </div>
+        <div class="lang">
+            <a id="lang-switch" href="/cat/">català</a>
+            <span>english</span>
+        </div>
+    </aside>
+    <main class="content">
+        <nav class="topnav annetfont" aria-label="Menu"><span class="brand">ANNET PLANET</span><a href="/eng/">Comics</a><a href="/eng/archive/">Archive</a><a href="/eng/artist/">Artist</a></nav>
+        <div class="about">
+            <div class="about-top">
+                <img class="portrait" src="/images/toonme.webp" width="700" height="797" alt="Annet Planet">
+                <div>
+                    <h1 class="annetfont">ABOUT ME</h1>
+                    <p>
+                    My name is Anna Bach Valls, I live in Barcelona and I spend most of my time working, drawing
+                    and hiking. I studied Mathematics and Computer Science at university. By day, I work as a
+                    product analyst in the tech industry. This allows me to see the excitement, but also the
+                    everyday monotony, of working in an office in such a fast paced and creative industry. By
+                    night, I draw inspiration from my daily life and bring together my two greatest pleasures,
+                    art and humor, to give life to my alter ego of Annet Planet.
+                    </p>
                 </div>
             </div>
+
+            <h2 class="annetfont">PERSONAL PROJECTS</h2>
+            <p>Besides the comics, I keep busy with a few other things I'm proud of.</p>
+            <div class="projects">
+            <article class="project">
+                <div class="icon" aria-hidden="true">&#128640;</div>
+                <h3>Hypatia Mars missions</h3>
+                <span class="tag">Simulated Mars missions</span>
+                <p>I took part in <strong>Hypatia I</strong> and <strong>Hypatia II</strong>, two simulated Mars missions run at the Mars Desert Research Station in the Utah desert. I was the crew's resident artist, and Executive Officer on Hypatia II.</p>
+                <div class="links"><a href="https://hypatiamars.com/en/anna-bach-valls/" target="_blank" rel="noopener">Hypatia Mars crew page &rarr;</a></div>
+            </article>
+            <article class="project">
+                <div class="icon" aria-hidden="true">&#128214;</div>
+                <h3>Les Exploradores de Mart</h3>
+                <span class="tag">Children's book &middot; Estrella Polar, 2025</span>
+                <p>A picture book I wrote and illustrated, inspired by the women of the Hypatia II crew. Astronauts are sent to Mars to repair an antenna hit by a meteorite and get the robots back in touch with Earth. A story to encourage girls towards science (in Catalan, ages 6&ndash;12).</p>
+                <div class="links"><a href="https://www.alguerset.com/products/720095-exploradores-de-mart.html" target="_blank" rel="noopener">Get the book &rarr;</a></div>
+            </article>
+            <article class="project">
+                <div class="icon" aria-hidden="true">&#127922;</div>
+                <h3>The Martian Astronauts Card Game</h3>
+                <span class="tag">Cooperative card game &middot; Lastuf Games</span>
+                <p>A cooperative card game for 1&ndash;4 players (ages 6+, 15-minute games) where you form the crew of Hypatia I and complete Mars missions by remembering and matching cards across astronomy, engineering, biology and communication. I illustrated it.</p>
+                <div class="links"><a href="https://hypatiamars.com/en/outreach/hypatia-i-the-martian-astronauts-card-game/" target="_blank" rel="noopener">About the game &rarr;</a></div>
+            </article>
+            <article class="project">
+                <div class="icon" aria-hidden="true">&#9999;&#65039;</div>
+                <h3>Drawing at events</h3>
+                <span class="tag">Live drawing</span>
+                <p>I also draw live at events. If you'd like me to bring some pencils to yours, drop me a line!</p>
+                <div class="links"><a href="mailto:annetplanetcomics@gmail.com">Get in touch &rarr;</a></div>
+            </article>
+            </div>
+
+            <h2 class="annetfont">NEWSFEED</h2>
+            <a class="news-card" href="https://www.lavanguardia.com/vida/20210303/6262637/anna-bach-dibujo-mujer-trabajadora-tono-positivo-anna-bach.html" target="_blank" rel="noopener">
+                <img class="archive-img" src="/images/news1.webp" width="480" height="273" loading="lazy" alt="La Vanguardia">
+                <div>
+                    <strong>Anna Bach: “Dibujo la mujer trabajadora en tono positivo”</strong>
+                    <p>I recently got featured in <em>La Vanguardia</em> in an article that pretty much sums my life up.</p>
+                    <p class="date">March 2021</p>
+                </div>
+            </a>
+            <a class="news-card" href="https://soundcloud.com/pcwc/pcwc-annet-planet" target="_blank" rel="noopener">
+                <img class="archive-img" src="/images/news2.webp" width="480" height="274" loading="lazy" alt="PodComics WebCast">
+                <div>
+                    <strong>PCWC - Annet Planet</strong>
+                    <p>The great David Daneman interviewed me in his famous podcast <em>The PodComics WebCast</em>.</p>
+                    <p class="date">April 2020</p>
+                </div>
+            </a>
         </div>
-    </div>
+    </main>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
 </body>
-
-<script>
-    ;(function (a) {
-        a.fn.rwdImageMaps = function () {
-            var c = this;
-            var b = function () {
-                c.each(function () {
-                    if (typeof (a(this).attr("usemap")) == "undefined") {
-                        return
-                    }
-                    var e = this, d = a(e);
-                    a("<img />").on('load', function () {
-                        var g = "width", m = "height", n = d.attr(g), j = d.attr(m);
-                        if (!n || !j) {
-                            var o = new Image();
-                            o.src = d.attr("src");
-                            if (!n) {
-                                n = o.width
-                            }
-                            if (!j) {
-                                j = o.height
-                            }
-                        }
-                        var f = d.width() / 100, k = d.height() / 100, i = d.attr("usemap").replace("#", ""),
-                            l = "coords";
-                        a('map[name="' + i + '"]').find("area").each(function () {
-                            var r = a(this);
-                            if (!r.data(l)) {
-                                r.data(l, r.attr(l))
-                            }
-                            var q = r.data(l).split(","), p = new Array(q.length);
-                            for (var h = 0; h < p.length; ++h) {
-                                if (h % 2 === 0) {
-                                    p[h] = parseInt(((q[h] / n) * 100) * f)
-                                } else {
-                                    p[h] = parseInt(((q[h] / j) * 100) * k)
-                                }
-                            }
-                            r.attr(l, p.toString())
-                        })
-                    }).attr("src", d.attr("src"))
-                })
-            };
-            a(window).resize(b).trigger("resize");
-            return this
-        }
-    })(jQuery);
-</script>
-<script>
-    includeHTML();
-    jQuery(document).ready(function (e) {
-        setTimeout(function () {
-            jQuery('img[usemap]').rwdImageMaps();
-        }, 2000);
-        console.log('AAA');
-    });
-</script>
-
 </html>
